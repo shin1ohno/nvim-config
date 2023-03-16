@@ -130,6 +130,13 @@ end
 -- else
 --   vim.notify("pyright not found!", vim.log.levels.WARN, {title = 'Nvim-config'})
 -- end
+if utils.executable("typescript-language-server") then
+  lspconfig.tsserver.setup {
+    on_attach = custom_attach,
+    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+    cmd = { "typescript-language-server", "--stdio" }
+  }
+end
 
 if utils.executable("ltex-ls") then
   lspconfig.ltex.setup {
