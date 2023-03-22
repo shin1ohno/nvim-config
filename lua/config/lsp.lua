@@ -138,6 +138,14 @@ if utils.executable("typescript-language-server") then
   }
 end
 
+if utils.executable("solargraph") then
+  lspconfig.ruby_ls.setup {
+    on_attach = custom_attach,
+    filetypes = { "ruby" },
+    cmd = { "solargraph", "stdio" }
+  }
+end
+
 if utils.executable("ltex-ls") then
   lspconfig.ltex.setup {
     on_attach = custom_attach,
