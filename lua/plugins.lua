@@ -98,6 +98,17 @@ packer.startup {
       after = "nvim-lspconfig"
     }
 
+    use {
+      'nvim-neotest/neotest',
+      requires = {
+        'mrcjkb/neotest-haskell',
+        'nvim-treesitter/nvim-treesitter',
+        'nvim-lua/plenary.nvim',
+        'antoinemadec/FixCursorHold.nvim',
+      },
+      config = [[require('config.neotest')]],
+    }
+
     -- Super fast buffer jump
     use {
       "phaazon/hop.nvim",
