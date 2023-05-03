@@ -88,6 +88,16 @@ packer.startup {
       use { "vlime/vlime", rtp = "vim/", ft = { "lisp" } }
     end
 
+    use {
+      'mrcjkb/haskell-tools.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope.nvim', -- optional
+      },
+      ft = { "haskell" },
+      after = "nvim-lspconfig"
+    }
+
     -- Super fast buffer jump
     use {
       "phaazon/hop.nvim",
