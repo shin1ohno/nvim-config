@@ -92,7 +92,8 @@ packer.startup {
       'mrcjkb/haskell-tools.nvim',
       requires = {
         'nvim-lua/plenary.nvim',
-        'nvim-telescope/telescope.nvim', -- optional
+        'nvim-telescope/telescope.nvim',
+        'mfussenegger/nvim-dap',
       },
       ft = { "haskell" },
       after = "nvim-lspconfig"

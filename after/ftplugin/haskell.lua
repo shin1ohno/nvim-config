@@ -17,23 +17,24 @@ ht.start_or_attach {
     hover = {
       -- Whether to disable haskell-tools hover
       -- and use the builtin lsp's default handler
-      disable = false,
+      disable = true,
       -- Set to nil to disable
-      border = {
-        { '╭', 'FloatBorder' },
-        { '─', 'FloatBorder' },
-        { '╮', 'FloatBorder' },
-        { '│', 'FloatBorder' },
-        { '╯', 'FloatBorder' },
-        { '─', 'FloatBorder' },
-        { '╰', 'FloatBorder' },
-        { '│', 'FloatBorder' },
-      },
+      border = nil,
+     -- {
+     --   { '╭', 'FloatBorder' },
+     --   { '─', 'FloatBorder' },
+     --   { '╮', 'FloatBorder' },
+     --   { '│', 'FloatBorder' },
+     --   { '╯', 'FloatBorder' },
+     --   { '─', 'FloatBorder' },
+     --   { '╰', 'FloatBorder' },
+     --   { '│', 'FloatBorder' },
+     -- },
       -- Stylize markdown (the builtin lsp's default behaviour).
       -- Setting this option to false sets the file type to markdown and enables
       -- Treesitter syntax highligting for Haskell snippets
       -- if nvim-treesitter is installed
-      stylize_markdown = true,
+      stylize_markdown = false,
       -- Whether to automatically switch to the hover window
       auto_focus = false,
     },
